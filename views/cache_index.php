@@ -89,9 +89,10 @@
           <small>
             This form can be used to test any number to see if it is a Fizz
             number, a Buzz number, a FizzBuzz number, or just a normal number.
-            Enter a number below, or post the <code>number</code> parameter to
-            the location <code>/fizzbuzz/check</code>. It will return a JSON
-            string with the key <code>result</code> with the status of the number.
+            Enter a number below, or post the <code>start</code> and <code>stop</code>
+            parameters to the location <code>/fizzbuzz/check</code>. It will return
+            a JSON string with the key being the number and the value being the
+            the status of the number.
           </small>
         </div>
       </div>
@@ -100,8 +101,12 @@
         <form action="/fizzbuzz/check" method="post">
           <div class="form-row">
             <div class="col">
-              <label for="number">Number to test</label>
-              <input type="number" class="form-control" id="number" name="number" placeholder="Enter number" required>
+              <label for="start">Starting number</label>
+              <input type="number" class="form-control" id="start" name="start" placeholder="Enter number" required>
+            </div>
+            <div class="col">
+              <label for="stop">Stopping number</label>
+              <input type="number" class="form-control" id="stop" name="stop" placeholder="Enter number" required>
             </div>
           </div>
           <div class="form-row mt-4 float-right">
