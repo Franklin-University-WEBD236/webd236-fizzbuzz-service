@@ -15,7 +15,7 @@ function fizzbuzz($number) {
   return $result;
 }
 
-function post_check() {
+function post_test() {
   $result = array();
   $start = (int)safeParam($_POST, 'start', false);
   $stop = (int)safeParam($_POST, 'stop', false);

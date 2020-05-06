@@ -98,7 +98,7 @@
       </div>
 
       <div class="card-body">
-        <form action="/fizzbuzz/check" method="post">
+        <form action="/fizzbuzz/test" method="post">
           <div class="form-row">
             <div class="col">
               <label for="start">Starting number</label>
