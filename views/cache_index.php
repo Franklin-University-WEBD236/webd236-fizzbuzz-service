@@ -84,11 +84,14 @@
   <div class="col-lg-12">
     <div class="card">
       <div class="card-header">
-        <div class="h3">FizzBuzz Service</div>
+        <div class="h3">Try it out!</div>
         <div>
           <small>
             This form can be used to test any number to see if it is a Fizz
             number, a Buzz number, a FizzBuzz number, or just a normal number.
+            Enter a number below, or post the <code>number</code> parameter to
+            the location <code>/fizzbuzz/check</code>. It will return a JSON
+            string with the key <code>result</code> with the status of the number.
           </small>
         </div>
       </div>
