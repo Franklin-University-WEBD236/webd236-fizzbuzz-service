@@ -1,6 +1,5 @@
 <?php
 require_once "include/util.php";
-// require_once "models/fizzbuzz.php";
 
 function fizzbuzz($number) {
   $result = "NaN";
@@ -13,7 +12,7 @@ function fizzbuzz($number) {
   } else if ($number % 5 == 0) {
     $result = "Buzz";
   }
-  return result;
+  return $result;
 }
 
 function post_check() {
@@ -21,20 +20,13 @@ function post_check() {
   $start = (int)safeParam($_POST, 'start', false);
   $stop = (int)safeParam($_POST, 'stop', false);
   if ($start > $stop) {
-    
+    $temp = $start;
+    $start = $stop;
+    $stop = $temp;
   }
-  if ($number) {
-    if ($number % 3 != 0 && $number % 5 != 0) {
-      $result = $number;
-    } else if ($number % 3 == 0 && $number % 5 == 0) {
-      $result = "FizzBuzz";
-    } else if ($number % 3 == 0) {
-      $result = "Fizz";
-    } else if ($number % 5 == 0) {
-      $result = "Buzz";
-    }
+  for ($i = $start; $i<$stop; ++$i) {
+    $result[$i] = fizzbuzz($i);
   }
-  $result = array("result" => $result);
   echo(json_encode($result));
   exit();  
 }
